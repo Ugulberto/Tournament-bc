@@ -6,6 +6,7 @@ import java.util.List;
 import com.equipo07.torneo.enums.TournamentStatus;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class TournamentDTO {
 
     @NotNull(message = "ID field cannot be empty")

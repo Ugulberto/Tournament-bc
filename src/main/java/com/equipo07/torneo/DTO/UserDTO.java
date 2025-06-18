@@ -3,10 +3,13 @@ package com.equipo07.torneo.DTO;
 import java.util.List;
 
 import com.equipo07.torneo.enums.Ranks;
+import com.equipo07.torneo.model.Message;
+import com.equipo07.torneo.model.Tournament;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,6 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class UserDTO {
     @NotNull(message = "ID field cannot be empty")
     private Integer id;
@@ -34,6 +38,8 @@ public class UserDTO {
     @NotNull(message = "Rank field cannot be empty")
     private Ranks rank;
 
-    private List<TournamentDTO> tournaments;
+    private List<Tournament> tournaments;
+
+    private List<Message> sentMessages;
 
 }
