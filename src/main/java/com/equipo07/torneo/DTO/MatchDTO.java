@@ -6,6 +6,7 @@ import com.equipo07.torneo.enums.Results;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class MatchDTO {
     @NotNull(message = "Match ID field cannot be empty")
     private Integer matchId;
